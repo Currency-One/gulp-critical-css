@@ -143,8 +143,6 @@ test.cb('Expect critical rules by string to be critical only', t => {
 			const generatedContent = files[1].contents.toString();
 			const expectedContent = data.toString();
 
-			require('fs').writeFile('test.css', files[1].contents.toString());
-
 			t.is(generatedContent, expectedContent);
 			t.end();
 		});
@@ -184,8 +182,6 @@ test.cb('Expect critical rules by RegExp to be critical only', t => {
 
 			const generatedContent = files[1].contents.toString();
 			const expectedContent = data.toString();
-
-			require('fs').writeFile('test.css', files[1].contents.toString());
 
 			t.is(generatedContent, expectedContent);
 			t.end();
